@@ -15,7 +15,7 @@ app_path = os.path.join("apps", APPNAME_TO_DIRECTORY.get(app_name, app_name))
 if "DOKKU_SCALE" in os.listdir(app_path):
     shutil.copyfile(os.path.join(app_path, "DOKKU_SCALE"), "DOKKU_SCALE")
 
-if "dashr" in appname:
+if "dashr" in app_name:
     for rfile in rfiles:
         shutil.copyfile(os.path.join(app_path, rfile), rfile)
 else:
