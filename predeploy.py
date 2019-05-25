@@ -21,5 +21,4 @@ if "dashr" in app_name:
 else:
     for f in pyfiles:
         shutil.copyfile(os.path.join(app_path, f), f)
-
-subprocess.run("python -m pip install -r requirements.txt".split(" "))
+    subprocess.run("python -m pip install -r requirements.txt".split(" "))

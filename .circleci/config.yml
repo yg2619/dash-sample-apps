@@ -45,6 +45,10 @@ jobs:
             do
               if [ "$APP" == "$CIRCLE_BRANCH" ] 
               then
+                if [ "$APP" == "dashr-"* ]
+                then
+                  cp "apps/$APP/.buildpacks" .
+                fi
                 git push playground $CIRCLE_BRANCH:master --force
                 exit 0
               else
